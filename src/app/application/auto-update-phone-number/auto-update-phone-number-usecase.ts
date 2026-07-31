@@ -44,6 +44,7 @@ export class AutoUpdatePhoneNumberUseCase {
 
     try {
       const linksSchedule = await this.getLinkSchedule()
+      console.log(1111, linksSchedule?.length)
 
       for (const element of linksSchedule) {
         const itemPublic = this.linksPublic.find(item => item.id === element.id)
